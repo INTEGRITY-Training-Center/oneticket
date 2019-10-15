@@ -1,0 +1,5 @@
+D:\New folder (2)\OneTM\OneTM_Info\bin\Debug\OneTM_Info.dll
+D:\New folder (2)\OneTM\OneTM_Info\bin\Debug\OneTM_Info.pdb
+D:\New folder (2)\OneTM\OneTM_Info\obj\Debug\OneTM_Info.dll
+D:\New folder (2)\OneTM\OneTM_Info\obj\Debug\OneTM_Info.pdb
+D:\New folder (2)\OneTM\OneTM_Info\obj\Debug\OneTM_Info.csprojResolveAssemblyReference.cache
