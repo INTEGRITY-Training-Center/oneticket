@@ -13,7 +13,6 @@ namespace OneTM_Info
         public string Password { get; set; }
         public int UserType { get; set; }
 
-        public bool status { get; set; }
         public DateTime CreatedDate { get; set; }
         public DateTime UpdatedDate { get; set; }
     }
