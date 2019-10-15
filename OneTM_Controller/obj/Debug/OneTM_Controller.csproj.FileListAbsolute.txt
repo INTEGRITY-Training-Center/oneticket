@@ -1,0 +1,9 @@
+D:\New folder (2)\OneTM\OneTM_Controller\bin\Debug\OneTM_Controller.dll
+D:\New folder (2)\OneTM\OneTM_Controller\bin\Debug\OneTM_Controller.pdb
+D:\New folder (2)\OneTM\OneTM_Controller\obj\Debug\OneTM_Controller.csprojResolveAssemblyReference.cache
+D:\New folder (2)\OneTM\OneTM_Controller\obj\Debug\OneTM_Controller.dll
+D:\New folder (2)\OneTM\OneTM_Controller\obj\Debug\OneTM_Controller.pdb
+D:\New folder (2)\OneTM\OneTM_Controller\bin\Debug\OneTM_DAO.dll
+D:\New folder (2)\OneTM\OneTM_Controller\bin\Debug\OneTM_Info.dll
+D:\New folder (2)\OneTM\OneTM_Controller\bin\Debug\OneTM_DAO.pdb
+D:\New folder (2)\OneTM\OneTM_Controller\bin\Debug\OneTM_Info.pdb

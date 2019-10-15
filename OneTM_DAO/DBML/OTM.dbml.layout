@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 9.5" name="OTM">
+  <DataContextMoniker Name="/OTMDataContext" />
+  <nestedChildShapes>
+    <classShape Id="f9c8a686-3f19-4704-a3c2-658224badced" absoluteBounds="0.75, 0.75, 2, 2.9247054036458326">
+      <DataClassMoniker Name="/OTMDataContext/Account" />
+      <nestedChildShapes>
+        <elementListCompartment Id="09c413fa-6014-43a3-9f88-60cc42faf61a" absoluteBounds="0.765, 1.21, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="cd2b43de-bba9-4ac6-a5e5-07e20316506a" absoluteBounds="3.75, 0.75, 2, 1.9631982421875">
+      <DataClassMoniker Name="/OTMDataContext/User" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b746a477-b675-4ba5-98fa-3a740dcf6c6d" absoluteBounds="3.765, 1.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="accd91fd-a904-4894-9789-8ef4c47e0424" absoluteBounds="3.75, 3.75, 2, 1.7708968098958327">
+      <DataClassMoniker Name="/OTMDataContext/ClosedTicket" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6a817fa4-d46b-42e5-b373-bf0dce722fad" absoluteBounds="3.765, 4.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f7f86f8d-867f-4cde-af52-252931662425" absoluteBounds="6.75, 0.75, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/OTMDataContext/LoginForm" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7c895c6a-eff1-458a-8abf-d1658d6b13a6" absoluteBounds="6.765, 1.21, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="5c9dc1bb-0c96-4a24-8e5b-b3e6b4610e98" absoluteBounds="0.75, 6.75, 2, 1.7708968098958327">
+      <DataClassMoniker Name="/OTMDataContext/Member" />
+      <nestedChildShapes>
+        <elementListCompartment Id="19d21433-2bac-44e3-a0cb-4943da7ffa73" absoluteBounds="0.765, 7.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="17aaf443-26b4-4724-9ec1-2951482895ec" absoluteBounds="6.75, 3.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/OTMDataContext/Team" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b13e0ec6-2b3b-4ab8-9f91-ab1e42ca1fa0" absoluteBounds="6.765, 4.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b736e834-fde4-4582-be46-98c372b2da1a" absoluteBounds="3.75, 6.75, 2, 2.5401025390624996">
+      <DataClassMoniker Name="/OTMDataContext/Ticket" />
+      <nestedChildShapes>
+        <elementListCompartment Id="de5b3a56-0e97-43b3-a7ff-faeeda3baec9" absoluteBounds="3.765, 7.21, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
