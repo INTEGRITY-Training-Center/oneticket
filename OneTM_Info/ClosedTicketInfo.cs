@@ -8,7 +8,6 @@ namespace OneTM_Info
 {
    public class ClosedTicketInfo
     {
-        public string Myname { get; set; }
         public string ClosedTicketID { get; set; }
         public string TicketID { get; set; }
         public string Solution { get; set; }
