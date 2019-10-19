@@ -14,5 +14,6 @@ namespace OneTM_Info
         public int UserType { get; set; }
         public DateTime CreatedDate { get; set; }
         public DateTime UpdatedDate { get; set; }
+        public string test { get; set; }
     }
 }
