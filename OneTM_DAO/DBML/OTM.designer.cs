@@ -22,7 +22,7 @@ namespace OneTM_DAO.DBML
 	using System;
 	
 	
-	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="ITTicketSystem")]
+	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="DB_A3691F_ticket")]
 	public partial class OTMDataContext : System.Data.Linq.DataContext
 	{
 		
@@ -51,10 +51,13 @@ namespace OneTM_DAO.DBML
     partial void InsertTicket(Ticket instance);
     partial void UpdateTicket(Ticket instance);
     partial void DeleteTicket(Ticket instance);
+    partial void InsertTicketTransition(TicketTransition instance);
+    partial void UpdateTicketTransition(TicketTransition instance);
+    partial void DeleteTicketTransition(TicketTransition instance);
     #endregion
 		
 		public OTMDataContext() : 
-				base(global::OneTM_DAO.Properties.Settings.Default.ITTicketSystemConnectionString1, mappingSource)
+				base(global::OneTM_DAO.Properties.Settings.Default.ITTicketSystemConnectionString, mappingSource)
 		{
 			OnCreated();
 		}
@@ -136,6 +139,14 @@ namespace OneTM_DAO.DBML
 			get
 			{
 				return this.GetTable<Ticket>();
+			}
+		}
+		
+		public System.Data.Linq.Table<TicketTransition> TicketTransitions
+		{
+			get
+			{
+				return this.GetTable<TicketTransition>();
 			}
 		}
 	}
@@ -1304,6 +1315,8 @@ namespace OneTM_DAO.DBML
 		
 		private decimal _Ticket_Estimated_Time;
 		
+		private string _TicketNumber;
+		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -1326,6 +1339,8 @@ namespace OneTM_DAO.DBML
     partial void OnTicket_SeverityChanged();
     partial void OnTicket_Estimated_TimeChanging(decimal value);
     partial void OnTicket_Estimated_TimeChanged();
+    partial void OnTicketNumberChanging(string value);
+    partial void OnTicketNumberChanged();
     #endregion
 		
 		public Ticket()
@@ -1509,6 +1524,184 @@ namespace OneTM_DAO.DBML
 					this._Ticket_Estimated_Time = value;
 					this.SendPropertyChanged("Ticket_Estimated_Time");
 					this.OnTicket_Estimated_TimeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TicketNumber", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		public string TicketNumber
+		{
+			get
+			{
+				return this._TicketNumber;
+			}
+			set
+			{
+				if ((this._TicketNumber != value))
+				{
+					this.OnTicketNumberChanging(value);
+					this.SendPropertyChanging();
+					this._TicketNumber = value;
+					this.SendPropertyChanged("TicketNumber");
+					this.OnTicketNumberChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.TicketTransition")]
+	public partial class TicketTransition : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private string _TicketTransitionID;
+		
+		private string _TicketNumber;
+		
+		private string _TeamID;
+		
+		private string _MemberID;
+		
+		private bool _Status;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnTicketTransitionIDChanging(string value);
+    partial void OnTicketTransitionIDChanged();
+    partial void OnTicketNumberChanging(string value);
+    partial void OnTicketNumberChanged();
+    partial void OnTeamIDChanging(string value);
+    partial void OnTeamIDChanged();
+    partial void OnMemberIDChanging(string value);
+    partial void OnMemberIDChanged();
+    partial void OnStatusChanging(bool value);
+    partial void OnStatusChanged();
+    #endregion
+		
+		public TicketTransition()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TicketTransitionID", DbType="Char(36) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string TicketTransitionID
+		{
+			get
+			{
+				return this._TicketTransitionID;
+			}
+			set
+			{
+				if ((this._TicketTransitionID != value))
+				{
+					this.OnTicketTransitionIDChanging(value);
+					this.SendPropertyChanging();
+					this._TicketTransitionID = value;
+					this.SendPropertyChanged("TicketTransitionID");
+					this.OnTicketTransitionIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TicketNumber", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		public string TicketNumber
+		{
+			get
+			{
+				return this._TicketNumber;
+			}
+			set
+			{
+				if ((this._TicketNumber != value))
+				{
+					this.OnTicketNumberChanging(value);
+					this.SendPropertyChanging();
+					this._TicketNumber = value;
+					this.SendPropertyChanged("TicketNumber");
+					this.OnTicketNumberChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TeamID", DbType="Char(36) NOT NULL", CanBeNull=false)]
+		public string TeamID
+		{
+			get
+			{
+				return this._TeamID;
+			}
+			set
+			{
+				if ((this._TeamID != value))
+				{
+					this.OnTeamIDChanging(value);
+					this.SendPropertyChanging();
+					this._TeamID = value;
+					this.SendPropertyChanged("TeamID");
+					this.OnTeamIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MemberID", DbType="Char(36) NOT NULL", CanBeNull=false)]
+		public string MemberID
+		{
+			get
+			{
+				return this._MemberID;
+			}
+			set
+			{
+				if ((this._MemberID != value))
+				{
+					this.OnMemberIDChanging(value);
+					this.SendPropertyChanging();
+					this._MemberID = value;
+					this.SendPropertyChanged("MemberID");
+					this.OnMemberIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Status", DbType="Bit NOT NULL")]
+		public bool Status
+		{
+			get
+			{
+				return this._Status;
+			}
+			set
+			{
+				if ((this._Status != value))
+				{
+					this.OnStatusChanging(value);
+					this.SendPropertyChanging();
+					this._Status = value;
+					this.SendPropertyChanged("Status");
+					this.OnStatusChanged();
 				}
 			}
 		}
