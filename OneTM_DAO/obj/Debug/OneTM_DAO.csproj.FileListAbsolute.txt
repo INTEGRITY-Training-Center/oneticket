@@ -6,3 +6,11 @@ D:\New folder (2)\OneTM\OneTM_DAO\bin\Debug\OneTM_Info.pdb
 D:\New folder (2)\OneTM\OneTM_DAO\obj\Debug\OneTM_DAO.csprojResolveAssemblyReference.cache
 D:\New folder (2)\OneTM\OneTM_DAO\obj\Debug\OneTM_DAO.dll
 D:\New folder (2)\OneTM\OneTM_DAO\obj\Debug\OneTM_DAO.pdb
+C:\Users\INTEGRITY\Desktop\otm\trunk\OneTM_DAO\bin\Debug\OneTM_DAO.dll.config
+C:\Users\INTEGRITY\Desktop\otm\trunk\OneTM_DAO\bin\Debug\OneTM_DAO.dll
+C:\Users\INTEGRITY\Desktop\otm\trunk\OneTM_DAO\bin\Debug\OneTM_DAO.pdb
+C:\Users\INTEGRITY\Desktop\otm\trunk\OneTM_DAO\bin\Debug\OneTM_Info.dll
+C:\Users\INTEGRITY\Desktop\otm\trunk\OneTM_DAO\bin\Debug\OneTM_Info.pdb
+C:\Users\INTEGRITY\Desktop\otm\trunk\OneTM_DAO\obj\Debug\OneTM_DAO.csprojResolveAssemblyReference.cache
+C:\Users\INTEGRITY\Desktop\otm\trunk\OneTM_DAO\obj\Debug\OneTM_DAO.dll
+C:\Users\INTEGRITY\Desktop\otm\trunk\OneTM_DAO\obj\Debug\OneTM_DAO.pdb

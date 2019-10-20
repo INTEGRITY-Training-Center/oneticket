@@ -26,7 +26,8 @@ namespace OneTM_DAO.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=.;Initial Catalog=ITTicketSystem;User ID=sa;Password=sys")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=sql7005.site4now.net;Initial Catalog=DB_A3691F_ticket;User ID=DB_A369" +
+            "1F_ticket_admin;Password=TTcc1122")]
         public string ITTicketSystemConnectionString {
             get {
                 return ((string)(this["ITTicketSystemConnectionString"]));
@@ -36,8 +37,8 @@ namespace OneTM_DAO.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-03C6121;Initial Catalog=ITTicketSystem;Integrated Security=Tr" +
-            "ue")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=sql7005.site4now.net;Initial Catalog=DB_A3691F_ticket;User ID=DB_A369" +
+            "1F_ticket_admin;Password=TTcc1122")]
         public string ITTicketSystemConnectionString1 {
             get {
                 return ((string)(this["ITTicketSystemConnectionString1"]));
