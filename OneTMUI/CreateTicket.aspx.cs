@@ -11,7 +11,14 @@ namespace OneTMUI
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if(IsPostBack)
+            {
+                btnCreate.Attributes.Add("style", "display:block;");
+                btnCancel.Attributes.Add("style", "display:block;");
+                btnUpdate.Attributes.Add("style", "display:none;");
+                btnClosed.Attributes.Add("style", "display:none;");
+                btnCancelUpdate.Attributes.Add("style", "display:none;");
+            }
         }
 
         
@@ -23,7 +30,13 @@ namespace OneTMUI
 
         protected void btnSearchTicket_Click(object sender, EventArgs e)
         {
+           
 
+            btnCreate.Attributes.Add("style", "display:none;");
+            btnCancel.Attributes.Add("style", "display:none;");
+            btnUpdate.Attributes.Add("style", "display:block;");
+            btnClosed.Attributes.Add("style", "display:block;");
+            btnCancelUpdate.Attributes.Add("style", "display:block;");
         }
     }
 }

@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.min.css" />
     <script src="bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="js/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="css/jquery.timepicker.css" />
+    <script src="js/jquery.timepicker.js"></script>
     
 
 
@@ -26,9 +28,18 @@
             margin-right:10px;
             
         }
-        #changeButtonRow{
+        .hideClass{
             display:none;
         }
+        /*.showClass{
+            display:block;
+        }*/
+        /*#changeButtonRow{
+            display:none;
+        }*/
+        /*#btnUpdate,#btnClosed,#btnCancelUpdate{
+            display:none;
+        }*/
     </style>
 </head>
 <body>
@@ -95,7 +106,7 @@
                                     <asp:Label ID="lblCreatedDateTime" runat="server" Text="Created DateTime:" CssClass="control-label"></asp:Label>
                                 </div>
                                 <div>
-                                    <asp:TextBox ID="txtCreatedDate" runat="server" CssClass="datetimeStyle datepicker"></asp:TextBox>
+                                    <asp:TextBox ID="txtCreatedDate" runat="server" TextMode="Date" CssClass="datetimeStyle datepicker"></asp:TextBox>
                                 </div>
                                 <div>
                                     <asp:TextBox ID="txtCreatedTime" runat="server" Width="60%" CssClass="datetimeStyle timepicker"></asp:TextBox>
@@ -106,7 +117,7 @@
                                     <asp:Label ID="lblExpiredDateTime" runat="server" Text="Expired DateTime:" CssClass="control-label"></asp:Label>
                                 </div>
                                 <div>
-                                    <asp:TextBox ID="txtExpiredDate" runat="server" CssClass="datetimeStyle datepicker"></asp:TextBox>
+                                    <asp:TextBox ID="txtExpiredDate" runat="server" TextMode="Date" CssClass="datetimeStyle datepicker"></asp:TextBox>
                                 </div>
                                 <div>
                                     <asp:TextBox ID="txtExpiredTime" runat="server" Width="60%" CssClass="datetimeStyle timepicker"></asp:TextBox>
@@ -117,10 +128,10 @@
                                     <asp:Label ID="lblClosedDateTime" runat="server" Text="Closed DateTime:" CssClass="control-label"></asp:Label>
                                 </div>
                                 <div>
-                                    <asp:TextBox ID="txtClosedDate" runat="server" CssClass="datetimeStyle datepicker"></asp:TextBox>
+                                    <asp:TextBox ID="txtClosedDate" runat="server" TextMode="Date" CssClass="datetimeStyle datepicker"></asp:TextBox>
                                 </div>
                                 <div>
-                                    <asp:TextBox ID="txtClosedTime" runat="server" Width="60%" CssClass="datetimeStyle timepicker"></asp:TextBox>
+                                    <asp:TextBox ID="txtClosedTime" runat="server" Width="60%"  CssClass="datetimeStyle timepicker"></asp:TextBox>
 
                                 </div>
                             </div>
@@ -178,26 +189,23 @@
                     </div>
                     
                 </div>
-                
-            </div>
-            <div class="row" id="changeButtonRow" style="margin-top:20px;">
                 <div class="offset-1 col-7">
                     <div class="row">
                         <div class="col-6">
                             <div class="row">
                                 <div class="col-4">
                                     <div class="row">
-                                    <asp:Button ID="btnUpdate" runat="server" Text="Update" CssClass="btn btn-secondary btnStyle form-control" />
+                                    <asp:Button ID="btnUpdate" runat="server" Text="Update" CssClass="btn btn-secondary hideClass btnStyle form-control" />
                                     </div>
                                 </div>
                                 <div class="col-4">
                                     <div class="row">
-                                    <asp:Button ID="btnClosed" runat="server" Text="Closed" CssClass="btn btn-secondary btnStyle form-control" />
+                                    <asp:Button ID="btnClosed" runat="server" Text="Closed" CssClass="btn btn-secondary hideClass btnStyle form-control" />
                                     </div>
                                 </div>
                                 <div class="col-4">
                                     <div class="row">
-                                    <asp:Button ID="btnCancelUpdate" runat="server" Text="Cancel" CssClass="btn btn-secondary btnStyle form-control" />
+                                    <asp:Button ID="btnCancelUpdate" runat="server" Text="Cancel" CssClass="btn btn-secondary hideClass btnStyle form-control" />
                                     </div>
                                 </div>
                             </div>
@@ -205,17 +213,25 @@
                     </div>
                     
                 </div>
-                
             </div>
+            <%--<div class="row" id="changeButtonRow" style="margin-top:20px;">
+                
+                
+            </div>--%>
         </div>
     </form>
 
     <script>
-        $(document).ready(function () {
-            $("#btnSearchTicket").click(function () {
-                $("#changeButtonRow").css("display", "block");
-                $("#createTicketButtonRow").css("display", "none");                
-            });
+        $('.timepicker').timepicker({
+            timeFormat: 'h:mm p',
+            interval: 30,
+            minTime: '8am',
+            maxTime: '8pm',
+            defaultTime: '10',
+            startTime: '8:00',
+            dynamic: true,
+            dropdown: true,
+            scrollbar: true
         });
     </script>
 
