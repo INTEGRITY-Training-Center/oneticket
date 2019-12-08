@@ -14,3 +14,13 @@ C:\Users\INTEGRITY\Desktop\otm\trunk\OneTM_DAO\bin\Debug\OneTM_Info.pdb
 C:\Users\INTEGRITY\Desktop\otm\trunk\OneTM_DAO\obj\Debug\OneTM_DAO.csprojResolveAssemblyReference.cache
 C:\Users\INTEGRITY\Desktop\otm\trunk\OneTM_DAO\obj\Debug\OneTM_DAO.dll
 C:\Users\INTEGRITY\Desktop\otm\trunk\OneTM_DAO\obj\Debug\OneTM_DAO.pdb
+D:\2.IntegrityC#\OneTMfromGithub\trunk\OneTM_DAO\bin\Debug\OneTM_DAO.dll.config
+D:\2.IntegrityC#\OneTMfromGithub\trunk\OneTM_DAO\bin\Debug\OneTM_DAO.dll
+D:\2.IntegrityC#\OneTMfromGithub\trunk\OneTM_DAO\bin\Debug\OneTM_DAO.pdb
+D:\2.IntegrityC#\OneTMfromGithub\trunk\OneTM_DAO\bin\Debug\OneTM_Info.dll
+D:\2.IntegrityC#\OneTMfromGithub\trunk\OneTM_DAO\bin\Debug\OneTM_Info.pdb
+D:\2.IntegrityC#\OneTMfromGithub\trunk\OneTM_DAO\obj\Debug\OneTM_DAO.csprojAssemblyReference.cache
+D:\2.IntegrityC#\OneTMfromGithub\trunk\OneTM_DAO\obj\Debug\OneTM_DAO.csproj.CoreCompileInputs.cache
+D:\2.IntegrityC#\OneTMfromGithub\trunk\OneTM_DAO\obj\Debug\OneTM_DAO.csproj.CopyComplete
+D:\2.IntegrityC#\OneTMfromGithub\trunk\OneTM_DAO\obj\Debug\OneTM_DAO.dll
+D:\2.IntegrityC#\OneTMfromGithub\trunk\OneTM_DAO\obj\Debug\OneTM_DAO.pdb
