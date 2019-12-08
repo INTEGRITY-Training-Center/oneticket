@@ -49,6 +49,36 @@ namespace OneTM_DAO
 
            }
        }
+       public void InsertytoTeam(TeamInfo Tinfo)
+       {
+           using (OTMDataContext db = new OTMDataContext())
+           {
+               Team Teamtbl = new Team();
+               Guid ID = Guid.NewGuid();
+               Teamtbl.TeamID = ID.ToString();
+               Teamtbl.TeamDescription = Tinfo.TeamDescription;
+               Teamtbl.CreatedDate = DateTime.UtcNow.AddMinutes(390);
+               Teamtbl.UpdatedDate = DateTime.UtcNow.AddMinutes(390);
+
+               db.Teams.InsertOnSubmit(Teamtbl);
+               db.SubmitChanges();
+
+           }
+       }
+
+       public bool UpdateByTeamID(string ID, TeamInfo Tinfo)
+       {
+           using (OTMDataContext db = new OTMDataContext())
+           {
+               var source = (from a in db.Teams where a.TeamID == ID select a).FirstOrDefault();
+               source.TeamDescription = Tinfo.TeamDescription;
+               source.CreatedDate = DateTime.UtcNow.AddMinutes(390);
+               source.UpdatedDate = DateTime.UtcNow.AddMinutes(390);
+               db.SubmitChanges();
+
+               return true;
+           }
+       }
        
     }
 }
