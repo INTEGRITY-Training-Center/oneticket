@@ -29,6 +29,11 @@ namespace OneTMUI
                 Uinfo.UpdatedDate = DateTime.UtcNow.AddMinutes(390);
                 Ucon.Insert(Uinfo);
             }
+            string message = "Sign Up successfully";
+            string script = "window.onload = function(){ alert('";
+            script += message;
+            script += "')};";
+            ClientScript.RegisterStartupScript(this.GetType(), "SuccessMessage", script, true);
    
         }
 
