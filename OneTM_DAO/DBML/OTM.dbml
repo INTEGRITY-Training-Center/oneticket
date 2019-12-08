@@ -1,5 +1,5 @@
-﻿<?xml version="1.0" encoding="utf-8"?><Database Name="DB_A3691F_ticket" Class="OTMDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=sql7005.site4now.net;Initial Catalog=DB_A3691F_ticket;User ID=DB_A3691F_ticket_admin" SettingsObjectName="OneTM_DAO.Properties.Settings" SettingsPropertyName="ITTicketSystemConnectionString" Provider="System.Data.SqlClient" />
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="DB_A50B4C_itchtunticket" Class="OTMDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=sql5041.site4now.net;Initial Catalog=DB_A50B4C_itchtunticket;User ID=DB_A50B4C_itchtunticket_admin" SettingsObjectName="OneTM_DAO.Properties.Settings" SettingsPropertyName="ITTicketSystemConnectionString" Provider="System.Data.SqlClient" />
   <Table Name="dbo.Account" Member="Accounts">
     <Type Name="Account">
       <Column Name="AccountID" Type="System.String" DbType="Char(36) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
@@ -83,6 +83,12 @@
       <Column Name="TeamID" Type="System.String" DbType="Char(36) NOT NULL" CanBeNull="false" />
       <Column Name="MemberID" Type="System.String" DbType="Char(36) NOT NULL" CanBeNull="false" />
       <Column Name="Status" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Severity" Member="Severities">
+    <Type Name="Severity">
+      <Column Name="SeverityID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="SeverityLevel" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
     </Type>
   </Table>
 </Database>

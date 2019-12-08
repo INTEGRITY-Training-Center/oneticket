@@ -22,7 +22,7 @@ namespace OneTM_DAO.DBML
 	using System;
 	
 	
-	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="DB_A3691F_ticket")]
+	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="DB_A50B4C_itchtunticket")]
 	public partial class OTMDataContext : System.Data.Linq.DataContext
 	{
 		
@@ -54,6 +54,9 @@ namespace OneTM_DAO.DBML
     partial void InsertTicketTransition(TicketTransition instance);
     partial void UpdateTicketTransition(TicketTransition instance);
     partial void DeleteTicketTransition(TicketTransition instance);
+    partial void InsertSeverity(Severity instance);
+    partial void UpdateSeverity(Severity instance);
+    partial void DeleteSeverity(Severity instance);
     #endregion
 		
 		public OTMDataContext() : 
@@ -147,6 +150,14 @@ namespace OneTM_DAO.DBML
 			get
 			{
 				return this.GetTable<TicketTransition>();
+			}
+		}
+		
+		public System.Data.Linq.Table<Severity> Severities
+		{
+			get
+			{
+				return this.GetTable<Severity>();
 			}
 		}
 	}
@@ -1702,6 +1713,92 @@ namespace OneTM_DAO.DBML
 					this._Status = value;
 					this.SendPropertyChanged("Status");
 					this.OnStatusChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Severity")]
+	public partial class Severity : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _SeverityID;
+		
+		private string _SeverityLevel;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnSeverityIDChanging(int value);
+    partial void OnSeverityIDChanged();
+    partial void OnSeverityLevelChanging(string value);
+    partial void OnSeverityLevelChanged();
+    #endregion
+		
+		public Severity()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SeverityID", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		public int SeverityID
+		{
+			get
+			{
+				return this._SeverityID;
+			}
+			set
+			{
+				if ((this._SeverityID != value))
+				{
+					this.OnSeverityIDChanging(value);
+					this.SendPropertyChanging();
+					this._SeverityID = value;
+					this.SendPropertyChanged("SeverityID");
+					this.OnSeverityIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SeverityLevel", DbType="VarChar(20) NOT NULL", CanBeNull=false)]
+		public string SeverityLevel
+		{
+			get
+			{
+				return this._SeverityLevel;
+			}
+			set
+			{
+				if ((this._SeverityLevel != value))
+				{
+					this.OnSeverityLevelChanging(value);
+					this.SendPropertyChanging();
+					this._SeverityLevel = value;
+					this.SendPropertyChanged("SeverityLevel");
+					this.OnSeverityLevelChanged();
 				}
 			}
 		}

@@ -50,5 +50,11 @@
         <elementListCompartment Id="1e72f2bf-0952-48e9-a031-237970581001" absoluteBounds="6.765, 7.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
+    <classShape Id="763c0d8a-4bd5-4be5-aa3d-4fd067ef7283" absoluteBounds="2.375, 0.5, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/OTMDataContext/Severity" />
+      <nestedChildShapes>
+        <elementListCompartment Id="123284ac-eab6-4295-b510-c82586343dfe" absoluteBounds="2.3899999999999997, 0.96, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
   </nestedChildShapes>
 </ordesignerObjectsDiagram>
