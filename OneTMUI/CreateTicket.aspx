@@ -56,7 +56,7 @@
                     <div class="row">
                         <div class="col-4">
                             <div class="row">                               
-                                    <asp:TextBox ID="txtTicketNo" runat="server" CssClass="form-control"></asp:TextBox>                                                           
+                                    <asp:TextBox ID="txtTicketNo" runat="server" CssClass="form-control" ReadOnly="true"></asp:TextBox>                                                           
                             </div>
                         </div>
                         <div class="col-3">

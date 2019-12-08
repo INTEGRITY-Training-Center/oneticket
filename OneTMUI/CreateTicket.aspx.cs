@@ -25,7 +25,9 @@ namespace OneTMUI
 
         protected void btnGenerateTicket_Click1(object sender, EventArgs e)
         {
-
+            DateTime date = DateTime.UtcNow;
+            int genticketnum = date.GetHashCode();
+            txtTicketNo.Text = genticketnum.ToString();
         }
 
         protected void btnSearchTicket_Click(object sender, EventArgs e)
