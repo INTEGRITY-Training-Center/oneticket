@@ -49,7 +49,7 @@ namespace OneTM_DAO
 
            }
        }
-       public void InsertytoTeam(TeamInfo Tinfo)
+       public void InsertToTeam(TeamInfo Tinfo)
        {
            using (OTMDataContext db = new OTMDataContext())
            {
