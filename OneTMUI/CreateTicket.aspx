@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.min.css" />
     <script src="bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="js/jquery-3.3.1.min.js"></script>
@@ -56,7 +56,7 @@
                     <div class="row">
                         <div class="col-4">
                             <div class="row">                               
-                                    <asp:TextBox ID="txtTicketNo" runat="server" CssClass="form-control" ReadOnly="true"></asp:TextBox>                                                           
+                                    <asp:TextBox ID="txtTicketNo" runat="server" CssClass="form-control"></asp:TextBox>                                                           
                             </div>
                         </div>
                         <div class="col-3">
@@ -67,7 +67,7 @@
                         <div class="col-5">
                             <div class="row">
                                 <div class="col-8">
-                                    <div class="row">
+                                    <div class="">
                                     <asp:TextBox ID="txtSearchTicket" runat="server" CssClass="form-control"></asp:TextBox>
                                     </div>
                                 </div>
