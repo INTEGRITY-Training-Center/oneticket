@@ -10,6 +10,24 @@ namespace OneTM_DAO
 {
     public class UserDAO
     {
+
+        public void InserttoUsertbl(UserInfo Uinfo)
+        {
+            using (OTMDataContext db = new OTMDataContext())
+            {
+                User Usertbl = new User();
+                Guid ID = Guid.NewGuid();
+                Usertbl.UserID = ID.ToString();
+               
+                Usertbl.UserName = Uinfo.UserName;
+                Usertbl.Password = Uinfo.Password;
+                Usertbl.UserType = 1;
+                Usertbl.CreatedDate = DateTime.UtcNow.AddMinutes(390);
+                Usertbl.UpdatedDate = DateTime.UtcNow.AddMinutes(390);
+                db.Users.InsertOnSubmit(Usertbl);
+                db.SubmitChanges();
+            }
+        }
         public List<UserInfo> SelectAllUserInfo()
         {
             List<UserInfo> lstUserInfo = new List<UserInfo>();
