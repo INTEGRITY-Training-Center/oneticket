@@ -20,7 +20,21 @@
             box-sizing: border-box;
         }
 
-     
+        #RequiredFieldValidator2{
+            margin-left:-161px;
+        }
+
+        .move{
+                margin-left: -132px;
+        }
+
+        #lblPassowrd{
+            margin-left:-129px;
+        }
+
+        #lblRetypePassword{
+           margin-left:-155px;
+        }
         button:hover {
             opacity: 0.8;
         }
@@ -144,9 +158,9 @@
 
             <div class="imgcontainer">
 
-                <a href="#">
+                <%--<a href="#">
                     <span class="close" title="Close Modal">&times;</span>
-                </a>
+                </a>--%>
                 <img src="Images/login1.jpg" alt="Avatar" class="avatar">
             </div>
             <div class="titleLoggin">
@@ -157,22 +171,31 @@
                 <div class="row">
                     <asp:Label ID="lblUserName" runat="server"><b>Username</b></asp:Label>
                     <asp:TextBox ID="txtUserName" placeholder="Enter Username" autocomplete="off" runat="server"></asp:TextBox>
-                    <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
-                    <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
-                    <asp:Label ID="lblPassowrd" runat="server"><b>Password</b></asp:Label>
-                    <asp:TextBox ID="txtPassword" placeholder="Enter Password" autocomplete="off" runat="server"></asp:TextBox>
-                    <asp:Label ID="lblRetypePassword" runat="server"><b>Retype Password</b></asp:Label>
-                    <asp:TextBox ID="txtRetypePassword" placeholder="Retype Password" autocomplete="off" runat="server"></asp:TextBox>
+                    <asp:RequiredFieldValidator ID="ValidationName" runat="server" ErrorMessage="Please Enter Name" ControlToValidate="txtUserName" ForeColor="Red"></asp:RequiredFieldValidator>
+
+
+                    <asp:Label ID="Label1" runat="server" class="move"><b><br />Email</b></asp:Label>
+                    <asp:TextBox ID="txtEmail" runat="server" placeholder="Enter Email" type="Email"></asp:TextBox>
+                    <asp:RequiredFieldValidator ID="ValidationEmail" runat="server" ErrorMessage="Please Enter Email" ControlToValidate="txtEmail" ForeColor="Red"></asp:RequiredFieldValidator>
+
+                    <asp:Label ID="lblPassowrd" runat="server"><b><br />Password</b></asp:Label>
+                    <asp:TextBox ID="txtPassword" placeholder="Enter Password" autocomplete="off" runat="server" TextMode="Password"></asp:TextBox>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Please Enter Password" ControlToValidate="txtPassword" ForeColor="Red"></asp:RequiredFieldValidator>
+
+                    <asp:Label ID="lblRetypePassword" runat="server"><b><br />Retype Password</b></asp:Label>
+                    <asp:TextBox ID="txtRetypePassword" placeholder="Retype Password" autocomplete="off" runat="server" TextMode="Password"></asp:TextBox>
+                    <asp:CompareValidator ID="CompareValidator1" runat="server" ErrorMessage="Password is not match" ControlToValidate="txtRetypePassword" ControlToCompare="txtPassword" ForeColor="Red"></asp:CompareValidator>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Please Retype Password" ControlToValidate="txtRetypePassword" ForeColor="Red"></asp:RequiredFieldValidator>
                 </div>
 
 
                 <div class="row" style="position: relative;">
                     <div style="margin-right: 20px;">
-                        <asp:Button ID="btnSignup" CssClass="button btnSignup" runat="server" Text="Sign Up" />
+                        <asp:Button ID="btnSignup" CssClass="button btnSignup" runat="server" Text="Sign Up" OnClick="btnSignup_Click" />
                     </div>
-                    <div>
-                        <asp:Button ID="btnCancel" CssClass="cancelbtn" runat="server" Text="Cancel" />
-                    </div>
+                   <%-- <div>
+                        <asp:Button ID="btnCancel" CssClass="cancelbtn" runat="server" Text="Cancel" OnClick="btnCancel_Click" />
+                    </div>--%>
                 </div>
 
 
@@ -198,7 +221,11 @@
                         <a href="#"><span class="psw" style="padding: 0; text-align: center;">Forgot Passowrd?</span></a>
                     </div>
                 </div>
+
+               
+
             </div>
+            <br /><br />
         </div>
 
     </form>
