@@ -174,9 +174,9 @@
                     <asp:RequiredFieldValidator ID="ValidationName" runat="server" ErrorMessage="Please Enter Name" ControlToValidate="txtUserName" ForeColor="Red"></asp:RequiredFieldValidator>
 
 
-                    <asp:Label ID="Label1" runat="server" class="move"><b><br />Email</b></asp:Label>
+                    <%--<asp:Label ID="Label1" runat="server" class="move"><b><br />Email</b></asp:Label>
                     <asp:TextBox ID="txtEmail" runat="server" placeholder="Enter Email" type="Email"></asp:TextBox>
-                    <asp:RequiredFieldValidator ID="ValidationEmail" runat="server" ErrorMessage="Please Enter Email" ControlToValidate="txtEmail" ForeColor="Red"></asp:RequiredFieldValidator>
+                    <asp:RequiredFieldValidator ID="ValidationEmail" runat="server" ErrorMessage="Please Enter Email" ControlToValidate="txtEmail" ForeColor="Red"></asp:RequiredFieldValidator>--%>
 
                     <asp:Label ID="lblPassowrd" runat="server"><b><br />Password</b></asp:Label>
                     <asp:TextBox ID="txtPassword" placeholder="Enter Password" autocomplete="off" runat="server" TextMode="Password"></asp:TextBox>

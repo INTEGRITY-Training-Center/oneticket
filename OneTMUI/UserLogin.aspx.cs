@@ -37,7 +37,7 @@ namespace OneTMUI
             txtUserName.Text = "";
             txtPassword.Text = "";
             txtRetypePassword.Text = "";
-            txtEmail.Text = "";
+            //txtEmail.Text = "";
         }
     }
 }
