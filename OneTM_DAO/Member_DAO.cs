@@ -10,6 +10,22 @@ namespace OneTM_DAO
 {
     public class Member_DAO
     {
+        public string selectByMemberID(string MemberID)
+        {
+            using (OTMDataContext db = new OTMDataContext())
+            {
+                var ID = (from a in db.Members where a.MemberID == MemberID select a).FirstOrDefault();
+                return ID.MemberID;
+            }
+        }
+        public string selectByTeamID(string TeamID)
+        {
+            using (OTMDataContext db = new OTMDataContext())
+            {
+                var ID = (from a in db.Teams where a.TeamID == TeamID select a).FirstOrDefault();
+                return ID.TeamID;
+            }
+        }
         public void MemberInsert(Member_Info minfo)
         {
             Member m;
