@@ -193,13 +193,13 @@ namespace OneTMUI {
         protected global::System.Web.UI.WebControls.DropDownList ddlTeamMember;
         
         /// <summary>
-        /// lblSecurityLevel control.
+        /// lblSecrityLevel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblSecurityLevel;
+        protected global::System.Web.UI.WebControls.Label lblSecrityLevel;
         
         /// <summary>
         /// ddlSecurityLevel control.

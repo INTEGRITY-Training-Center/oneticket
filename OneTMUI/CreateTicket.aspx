@@ -78,7 +78,6 @@
                                     </div>
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 </div>
@@ -161,7 +160,7 @@
                         </div>
                         <div class="col-4">
                             <div class="row" style="width: 100%; display: block;">
-                                <asp:Label ID="lblSecurityLevel" runat="server" Text="Security Level:"></asp:Label>
+                                <asp:Label ID="lblSecrityLevel" runat="server" Text="Severity Level:"></asp:Label>
                             </div>
                             <div class="row">
                                 <asp:DropDownList ID="ddlSecurityLevel" AutoPostBack="true" runat="server" Width="100%"></asp:DropDownList>
