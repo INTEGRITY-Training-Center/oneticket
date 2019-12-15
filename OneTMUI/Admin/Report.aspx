@@ -11,7 +11,7 @@
         <div>
             <asp:Button ID="userbtn" OnClick="userbtn_Click" runat="server" Text="User" />
             <asp:Button ID="teambtn" OnClick="teambtn_Click" runat="server" Text="Team" />
-            <asp:Button ID="memberbtn" OnClick="adminbtn_Click" runat="server" Text="Member" />
+            <asp:Button ID="memberbtn" OnClick="adminbtn_Click" runat="server" Text="Member" /><br /><br />
             <asp:GridView ID="gvuser" runat="server"></asp:GridView>
             <asp:GridView ID="gvteam" runat="server"></asp:GridView>
             <asp:GridView ID="gvmember" runat="server"></asp:GridView>
