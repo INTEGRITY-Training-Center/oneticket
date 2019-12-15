@@ -10,20 +10,32 @@ namespace OneTM_DAO
 {
     public class Member_DAO
     {
-        public string selectByMemberID(string MemberID)
+        public Member_Info selectByMemberID(string MemberID)
         {
             using (OTMDataContext db = new OTMDataContext())
             {
                 var ID = (from a in db.Members where a.MemberID == MemberID select a).FirstOrDefault();
-                return ID.MemberID;
+                Member_Info minfo = new Member_Info();
+                minfo.TeamID = ID.TeamID;
+                minfo.MemberNumber = ID.MemberNumber;
+                minfo.CreatedDate = ID.CreatedDate;
+                minfo.UpdatedDate = ID.UpdatedDate;
+              
+                return minfo;
             }
         }
-        public string selectByTeamID(string TeamID)
+        public Member_Info selectByTeamID(string TeamID)
         {
             using (OTMDataContext db = new OTMDataContext())
             {
-                var ID = (from a in db.Teams where a.TeamID == TeamID select a).FirstOrDefault();
-                return ID.TeamID;
+                var ID = (from a in db.Members where a.TeamID == TeamID select a).FirstOrDefault();
+                Member_Info minfo = new Member_Info();
+                minfo.TeamID = ID.TeamID;
+                minfo.MemberNumber = ID.MemberNumber;
+                minfo.CreatedDate = ID.CreatedDate;
+                minfo.UpdatedDate = ID.UpdatedDate;
+
+                return minfo;
             }
         }
         public void MemberInsert(Member_Info minfo)
