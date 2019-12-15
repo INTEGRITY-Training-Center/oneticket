@@ -9,7 +9,7 @@ using OneTM_Info;
 
 namespace OneTM_DAO
 {
-    class SeverityDAO
+    public class SeverityDAO
     {
         public List<SeverityInfo> SelectAllSeverityInfo()
         {
@@ -24,7 +24,7 @@ namespace OneTM_DAO
                     sinfo = new SeverityInfo();
                     sinfo.SeverityID = obj.SeverityID;
                     sinfo.SeverityLevel = obj.SeverityLevel;
-                    
+                    slist.Add(sinfo);
 
                 }
             }
