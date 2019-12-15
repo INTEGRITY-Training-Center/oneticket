@@ -17,5 +17,11 @@ namespace OneTM_Controller
             Tdao = new TeamDAO();
             Tdao.InsertToTeam(tinfo);
         }
+        public List<TeamInfo> selectallteam()
+        {
+            List<TeamInfo> lst = new List<TeamInfo>();
+            Tdao = new TeamDAO();
+            return Tdao.SelectAllTeamInfo();
+        }
     }
 }

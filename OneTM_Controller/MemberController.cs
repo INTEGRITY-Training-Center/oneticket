@@ -17,5 +17,11 @@ namespace OneTM_Controller
             Mdao = new Member_DAO();
             Mdao.MemberInsert(minfo);
         }
+        public List<Member_Info> selectallmember()
+        {
+            List<Member_Info> lst = new List<Member_Info>();
+            Mdao = new Member_DAO();
+            return Mdao.SelectAllMember_Info();
+        }
     }
 }

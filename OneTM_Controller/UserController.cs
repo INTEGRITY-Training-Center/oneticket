@@ -18,5 +18,12 @@ namespace OneTM_Controller
             Udao.InserttoUsertbl(uinfo);
         }
 
+        public List<UserInfo> selectalluser()
+        {
+            List<UserInfo> lst = new List<UserInfo>();
+            Udao = new UserDAO();
+           return Udao.SelectAllUserInfo();
+        }
+
     }
 }
