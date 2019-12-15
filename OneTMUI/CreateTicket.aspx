@@ -148,7 +148,7 @@
                                 <asp:Label ID="lblAssignTeam" runat="server" Text="Assign Team:"></asp:Label>
                             </div>
                             <div class="row">
-                                <asp:DropDownList ID="ddlAssignTeam" runat="server" Width="95%"></asp:DropDownList>
+                                <asp:DropDownList ID="ddlAssignTeam" AutoPostBack="true" OnSelectedIndexChanged="ddlAssignTeam_SelectedIndexChanged" runat="server" Width="95%"></asp:DropDownList>
                             </div>
                         </div>
                         <div class="col-4">
@@ -156,7 +156,7 @@
                                 <asp:Label ID="lblTeamMember" runat="server" Text="Team Member:"></asp:Label>
                             </div>
                             <div class="row">
-                                <asp:DropDownList ID="ddlTeamMember" runat="server" Width="95%"></asp:DropDownList>
+                                <asp:DropDownList ID="ddlTeamMember" AutoPostBack="true" runat="server" Width="95%"></asp:DropDownList>
                             </div>
                         </div>
                         <div class="col-4">
@@ -164,7 +164,7 @@
                                 <asp:Label ID="lblSecurityLevel" runat="server" Text="Security Level:"></asp:Label>
                             </div>
                             <div class="row">
-                                <asp:DropDownList ID="ddlSecurityLevel" runat="server" Width="100%"></asp:DropDownList>
+                                <asp:DropDownList ID="ddlSecurityLevel" AutoPostBack="true" runat="server" Width="100%"></asp:DropDownList>
                             </div>
                         </div>
                     </div>
@@ -220,6 +220,7 @@
                 
             </div>--%>
         </div>
+       
     </form>
 
     <script>
