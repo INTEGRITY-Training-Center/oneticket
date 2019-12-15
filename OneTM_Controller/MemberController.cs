@@ -8,7 +8,7 @@ using OneTM_DAO;
 
 namespace OneTM_Controller
 {
-    class MemberController
+  public  class MemberController
     {
         Member_Info minfo;
         Member_DAO Mdao;
