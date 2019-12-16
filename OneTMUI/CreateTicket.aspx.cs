@@ -11,9 +11,15 @@ namespace OneTMUI
 {
     public partial class CreateTicket : System.Web.UI.Page
     {
+        protected void Page_Init(object sender, EventArgs e)
+        {
+            
+        }
         protected void Page_Load(object sender, EventArgs e)
         {
-            if(!IsPostBack)
+           
+
+            if (!IsPostBack)
             {
                 btnCreate.Attributes.Add("style", "display:block;");
                 btnCancel.Attributes.Add("style", "display:block;");
@@ -23,6 +29,7 @@ namespace OneTMUI
 
 
                 teambind();
+                severitybind();
             }
             
         }
@@ -50,6 +57,18 @@ namespace OneTMUI
             ddlTeamMember.DataTextField = "MemberNumber";//CityName == database name
             ddlTeamMember.DataBind();
             ddlTeamMember.Items.Insert(0, new ListItem("Select Member"));
+        }
+
+        public void severitybind()
+        {
+            List<SeverityInfo> lst = new List<SeverityInfo>();//list constructor
+            SeverityController dao = new SeverityController();//to extract data dao constructor
+            lst = dao.selectallseverity();//get list
+            ddlSecurityLevel.DataSource = lst;
+            ddlSecurityLevel.DataValueField = "SeverityID";
+            ddlSecurityLevel.DataTextField = "SeverityLevel";//CityName == database name
+            ddlSecurityLevel.DataBind();
+            ddlSecurityLevel.Items.Insert(0, new ListItem("Select Severity"));
         }
 
         protected void btnGenerateTicket_Click1(object sender, EventArgs e)

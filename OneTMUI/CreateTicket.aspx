@@ -1,52 +1,11 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="CreateTicket.aspx.cs" Inherits="OneTMUI.CreateTicket" %>
-
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.min.css" />
-    <script src="bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <link rel="stylesheet" href="css/jquery.timepicker.css" />
-    <script src="js/jquery.timepicker.js"></script>
-    
-
-
-    <style>
-        
-        textarea{
-            width:100%;
-        }
-        .datetimeStyle{
-            outline:none;
-            border:1px solid gray;
-            box-shadow:none;
-            border-radius:5px;
-        }
-        .btnStyle{
-            margin-right:10px;
+﻿
+<%@ Page Title="" Language="C#" MasterPageFile="~/OTM_Master.Master" AutoEventWireup="true" CodeBehind="CreateTicket.aspx.cs" Inherits="OneTMUI.CreateTicket" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+      
             
-        }
-        .hideClass{
-            display:none;
-        }
-        /*.showClass{
-            display:block;
-        }*/
-        /*#changeButtonRow{
-            display:none;
-        }*/
-        /*#btnUpdate,#btnClosed,#btnCancelUpdate{
-            display:none;
-        }*/
-    </style>
-</head>
-<body>
-    <form id="form1" runat="server">
-        <div class="container-fluid">
-            <div class="row" style="margin-top:3em;">
+            <div class="row npri" style="margin-top:3em;">
                 <div class="col-1">
                     <div style="display: block; text-align: right; padding-top: 5px;">
                         <asp:Label ID="lblTicketNo" runat="server" Text="Ticket No:"></asp:Label>
@@ -82,7 +41,7 @@
                     </div>
                 </div>
             </div>
-            <div class="row" style="margin-top:25px;">
+            <div class="row d-print-block" style="margin-top:25px;">
                 <div class="col-1">
                     <div class="row" style="display: block; text-align: center;">
                         <asp:Label ID="lblIssue" runat="server" Text="Issue"></asp:Label>
@@ -218,24 +177,21 @@
                 
                 
             </div>--%>
-        </div>
        
-    </form>
-
-    <script>
-        $('.timepicker').timepicker({
-            timeFormat: 'h:mm p',
-            interval: 30,
-            minTime: '8am',
-            maxTime: '8pm',
-            defaultTime: '10',
-            startTime: '8:00',
-            dynamic: true,
-            dropdown: true,
-            scrollbar: true
-        });
+       <script>
+           $('.timepicker').timepicker({
+               timeFormat: 'h:mm p',
+               interval: 30,
+               minTime: '8am',
+               maxTime: '8pm',
+               defaultTime: '10',
+               startTime: '8:00',
+               dynamic: true,
+               dropdown: true,
+               scrollbar: true
+           });
     </script>
 
-    
-</body>
-</html>
+</asp:Content>
+
+

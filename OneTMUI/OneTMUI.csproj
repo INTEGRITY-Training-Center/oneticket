@@ -45,6 +45,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Intelligencia.UrlRewriter, Version=1.7.0.0, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\Intelligencia.UrlRewriter.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -69,6 +73,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Admin\Report.aspx" />
     <Content Include="bootstrap\.babelrc.js" />
     <Content Include="bootstrap\assets\brand\bootstrap-social-logo.png" />
     <Content Include="bootstrap\assets\brand\bootstrap-social.png" />
@@ -251,10 +256,21 @@
     <Content Include="Images\login1.jpg" />
     <Content Include="js\jquery.timepicker.js" />
     <Content Include="js\jquery-3.3.1.min.js" />
+    <Content Include="lib\Intelligencia.UrlRewriter.dll" />
+    <Content Include="TeamUI.aspx" />
+    <Content Include="ticket.aspx" />
+    <Content Include="TicketCreate.aspx" />
     <Content Include="UserLogin.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin\Report.aspx.cs">
+      <DependentUpon>Report.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Report.aspx.designer.cs">
+      <DependentUpon>Report.aspx</DependentUpon>
+    </Compile>
     <Compile Include="CreateTicket.aspx.cs">
       <DependentUpon>CreateTicket.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -262,7 +278,35 @@
     <Compile Include="CreateTicket.aspx.designer.cs">
       <DependentUpon>CreateTicket.aspx</DependentUpon>
     </Compile>
+    <Compile Include="OTM_Master.Master.cs">
+      <DependentUpon>OTM_Master.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OTM_Master.Master.designer.cs">
+      <DependentUpon>OTM_Master.Master</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TeamUI.aspx.cs">
+      <DependentUpon>TeamUI.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TeamUI.aspx.designer.cs">
+      <DependentUpon>TeamUI.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ticket.aspx.cs">
+      <DependentUpon>ticket.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ticket.aspx.designer.cs">
+      <DependentUpon>ticket.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TicketCreate.aspx.cs">
+      <DependentUpon>TicketCreate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TicketCreate.aspx.designer.cs">
+      <DependentUpon>TicketCreate.aspx</DependentUpon>
+    </Compile>
     <Compile Include="UserLogin.aspx.cs">
       <DependentUpon>UserLogin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -529,6 +573,7 @@
     <Content Include="bootstrap\_plugins\callout.rb" />
     <Content Include="bootstrap\_plugins\example.rb" />
     <Content Include="bootstrap\_plugins\markdown-block.rb" />
+    <Content Include="OTM_Master.Master" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -551,7 +596,9 @@
       <Name>OneTM_Info</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="App_Code\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

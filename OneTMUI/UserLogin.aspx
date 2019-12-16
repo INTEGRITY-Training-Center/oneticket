@@ -1,16 +1,8 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="UserLogin.aspx.cs" Inherits="OneTMUI.UserLogin" %>
+﻿
 
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-    <%--<meta name="viewport" content="width=device-width, initial-scale=1">--%>
-    <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.min.css" />
-    <script src="bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="js/jquery-3.3.1.min.js"></script>
-
-    <style>        
+<%@ Page Title="" Language="C#" MasterPageFile="~/OTM_Master.Master" AutoEventWireup="true" CodeBehind="UserLogin.aspx.cs" Inherits="OneTMUI.UserLogin" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+     <style>        
         input[type=text], input[type=password], input[type=email] {
             width: 100%;
             padding: 12px 20px;
@@ -59,7 +51,7 @@
 
         .container {
             /*padding: 16px;*/
-            width: 40%;
+         
             margin: -40px auto 0px auto;
         }
 
@@ -151,10 +143,9 @@
             /*margin: 0px auto;*/
         }
     </style>
-</head>
-<body>
-    <form id="form1" runat="server">
-        <div class="modal-content">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+     <div class="modal-content">
 
             <div class="imgcontainer">
 
@@ -169,7 +160,8 @@
             </div>
             <div class="container">
                 <div class="row">
-                    <asp:Label ID="lblUserName" runat="server"><b>Username</b></asp:Label>
+                    <div class="col-md-6 offset-3">
+                           <asp:Label ID="lblUserName" runat="server"><b>Username</b></asp:Label>
                     <asp:TextBox ID="txtUserName" placeholder="Enter Username" autocomplete="off" runat="server"></asp:TextBox>
                     <asp:RequiredFieldValidator ID="ValidationName" runat="server" ErrorMessage="Please Enter Name" ControlToValidate="txtUserName" ForeColor="Red"></asp:RequiredFieldValidator>
 
@@ -186,11 +178,13 @@
                     <asp:TextBox ID="txtRetypePassword" placeholder="Retype Password" autocomplete="off" runat="server" TextMode="Password"></asp:TextBox>
                     <asp:CompareValidator ID="CompareValidator1" runat="server" ErrorMessage="Password is not match" ControlToValidate="txtRetypePassword" ControlToCompare="txtPassword" ForeColor="Red"></asp:CompareValidator>
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Please Retype Password" ControlToValidate="txtRetypePassword" ForeColor="Red"></asp:RequiredFieldValidator>
-                </div>
+            
+                    </div>
+                     </div>
 
 
                 <div class="row" style="position: relative;">
-                    <div style="margin-right: 20px;">
+                    <div style="margin-right: 20px;" class="col-md-6 offset-3">
                         <asp:Button ID="btnSignup" CssClass="button btnSignup" runat="server" Text="Sign Up" OnClick="btnSignup_Click" />
                     </div>
                    <%-- <div>
@@ -200,17 +194,18 @@
 
 
                 <div class="row">
-                    <p>
+
+                    <div class="col-md-6 offset-3">
                         <asp:CheckBox ID="chkRemember" runat="server" Style="float: none;" Checked="true" Text="Remember me" />
-                    </p>
+                    </div>
                 </div>
                 
 
 
 
-                <div class="row" style="background-color: #f1f1f1; position: relative;">
-
-                    <div>
+                <div class="row" style="">
+                    <div class="col-md-6 offset-3">
+                    <div >
                         <asp:Label ID="lblNotMember" runat="server" Text="Not a member yet?"></asp:Label>
                         <div>
                             <a href="#" class="btnLogin"><span>Please Login!</span></a>
@@ -220,6 +215,7 @@
                     <div style="position: absolute; right: 0;">
                         <a href="#"><span class="psw" style="padding: 0; text-align: center;">Forgot Passowrd?</span></a>
                     </div>
+                        </div>
                 </div>
 
                
@@ -227,7 +223,8 @@
             </div>
             <br /><br />
         </div>
+</asp:Content>
 
-    </form>
-</body>
-</html>
+
+   
+
