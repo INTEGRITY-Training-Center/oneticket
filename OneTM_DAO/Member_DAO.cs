@@ -24,19 +24,28 @@ namespace OneTM_DAO
                 return minfo;
             }
         }
-        public Member_Info selectByTeamID(string TeamID)
+        public List<Member_Info> selectByTeamID(string TeamID)
         {
+            List<Member_Info> Mlist = new List<Member_Info>();
+            Member_Info Minfo;
             using (OTMDataContext db = new OTMDataContext())
             {
-                var ID = (from a in db.Members where a.TeamID == TeamID select a).FirstOrDefault();
-                Member_Info minfo = new Member_Info();
-                minfo.TeamID = ID.TeamID;
-                minfo.MemberNumber = ID.MemberNumber;
-                minfo.CreatedDate = ID.CreatedDate;
-                minfo.UpdatedDate = ID.UpdatedDate;
+                var data = (from a in db.Members where a.TeamID==TeamID select a).ToList();
+                foreach (var obj in data)
+                {
+                    Minfo = new Member_Info();
+                    Minfo.MemberID = obj.MemberID;
+                    Minfo.TeamID = obj.TeamID;
+                    Minfo.MemberNumber = obj.MemberNumber;
+                    Minfo.CreatedDate = obj.CreatedDate;
+                    Minfo.UpdatedDate = obj.UpdatedDate;
 
-                return minfo;
+                    Mlist.Add(Minfo);
+
+                }
             }
+
+            return Mlist;
         }
         public void MemberInsert(Member_Info minfo)
         {
@@ -46,7 +55,7 @@ namespace OneTM_DAO
                 m = new Member();
                 Guid ID = Guid.NewGuid();
                 m.MemberID = ID.ToString();
-                m.TeamID = ID.ToString();
+                m.TeamID = minfo.TeamID;
                 m.MemberNumber = minfo.MemberNumber;
                 m.CreatedDate = minfo.CreatedDate;
                 m.UpdatedDate = minfo.UpdatedDate;

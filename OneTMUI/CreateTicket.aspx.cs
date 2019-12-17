@@ -64,7 +64,7 @@ namespace OneTMUI
         {
             List<Member_Info> lst = new List<Member_Info>();//list constructor
             MemberController dao = new MemberController();//to extract data dao constructor
-            lst = dao.selectallmember();//get list
+            lst = dao.selectallmemberbyteamID(ID);//get list
             ddlTeamMember.DataSource = lst;
             ddlTeamMember.DataValueField = "MemberID";
             ddlTeamMember.DataTextField = "MemberNumber";//CityName == database name
@@ -104,7 +104,7 @@ namespace OneTMUI
 
         protected void ddlAssignTeam_SelectedIndexChanged(object sender, EventArgs e)
         {
-            memberbindById(ddlAssignTeam.SelectedItem .Value);
+            memberbindById(ddlAssignTeam.SelectedItem.Value);
         }
 
       

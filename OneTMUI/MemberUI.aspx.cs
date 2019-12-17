@@ -15,7 +15,11 @@ namespace OneTMUI
         MemberController Mcon=new MemberController();
         protected void Page_Load(object sender, EventArgs e)
         {
-            teambind();
+            if(!IsPostBack)
+            {
+                teambind();
+            }
+           
         }
 
         public void teambind()
@@ -24,7 +28,7 @@ namespace OneTMUI
             TeamController dao = new TeamController();//to extract data dao constructor
             lst = dao.selectallteam();//get list
             ddlselectteam.DataSource = lst;
-            //ddlselectteam.DataValueField = "TeamID";
+            ddlselectteam.DataValueField = "TeamID";
             ddlselectteam.DataTextField = "TeamDescription";//CityName == database name
             ddlselectteam.DataBind();
             ddlselectteam.Items.Insert(0, new ListItem("Select Team"));
@@ -32,7 +36,11 @@ namespace OneTMUI
 
         protected void Btncreate_Click(object sender, EventArgs e)
         {
-
+            Member_Info minfo = new Member_Info();
+            MemberController dao = new MemberController();
+            minfo.MemberNumber = txtmembername.Text.Trim();
+            minfo.TeamID = ddlselectteam.SelectedItem.Value;
+            dao.Insert(minfo);
         }
     }
 

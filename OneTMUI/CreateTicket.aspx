@@ -54,7 +54,7 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="row">
-                                <textarea id="TextArea1" cols="20" rows="15" style="width:100%;"></textarea>
+                                <textarea id="TextArea1" cols="20" rows="8" style="width:100%;"></textarea>
                             </div>
                         </div>
                     </div>
