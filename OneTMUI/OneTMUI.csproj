@@ -259,7 +259,6 @@
     <Content Include="lib\Intelligencia.UrlRewriter.dll" />
     <Content Include="TeamUI.aspx" />
     <Content Include="ticket.aspx" />
-    <Content Include="TicketCreate.aspx" />
     <Content Include="UserLogin.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -299,13 +298,6 @@
     </Compile>
     <Compile Include="ticket.aspx.designer.cs">
       <DependentUpon>ticket.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="TicketCreate.aspx.cs">
-      <DependentUpon>TicketCreate.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="TicketCreate.aspx.designer.cs">
-      <DependentUpon>TicketCreate.aspx</DependentUpon>
     </Compile>
     <Compile Include="UserLogin.aspx.cs">
       <DependentUpon>UserLogin.aspx</DependentUpon>
