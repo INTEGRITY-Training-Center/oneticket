@@ -27,14 +27,27 @@ namespace OneTMUI
                 btnClosed.Attributes.Add("style", "display:none;");
                 btnCancelUpdate.Attributes.Add("style", "display:none;");
 
-
                 teambind();
                 severitybind();
             }
             
         }
 
-        
+        public void Application_BeginRequest(object sender, EventArgs e)
+        {
+
+            string fullOrigionalpath = Request.Url.ToString();
+
+            if (fullOrigionalpath.Contains("/CreateTicket.aspx"))
+            {
+                Context.RewritePath("/CreateTicket");
+            }
+            else if (fullOrigionalpath.Contains("/Products/DVDs.aspx"))
+            {
+                Context.RewritePath("/Products.aspx?Category=DVDs");
+            }
+        }
+
         public void teambind()
         {
             List<TeamInfo> lst = new List<TeamInfo>();//list constructor

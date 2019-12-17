@@ -1,0 +1,37 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="OTM_Master.master.cs" Inherits="OneTMUI.OTM_Master" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+    <link href="bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+   
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <style>
+
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="container-fluid" style="text-align:center;margin-top:2%;">
+           
+                <a href="TeamUI" class="btn btn-info col-md-2" >Team</a> 
+                <a href="CreateTicket" class="btn btn-success col-md-2" >Ticket</a> 
+                <a href="Signin" class="btn btn-primary col-md-2" >Register</a> 
+           
+        </div>
+    <div class="container-fluid">
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+
+     <script src="bootstrap/dist/js/bootstrap.js"></script>
+    <script src="js/jquery-3.3.1.min.js"></script>
+</body>
+</html>

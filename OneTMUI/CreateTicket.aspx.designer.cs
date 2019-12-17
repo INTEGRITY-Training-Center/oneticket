@@ -85,15 +85,6 @@ namespace OneTMUI {
         protected global::System.Web.UI.WebControls.TextBox txtCreatedDate;
         
         /// <summary>
-        /// txtCreatedTime control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCreatedTime;
-        
-        /// <summary>
         /// lblExpiredDateTime control.
         /// </summary>
         /// <remarks>
@@ -112,15 +103,6 @@ namespace OneTMUI {
         protected global::System.Web.UI.WebControls.TextBox txtExpiredDate;
         
         /// <summary>
-        /// txtExpiredTime control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtExpiredTime;
-        
-        /// <summary>
         /// lblClosedDateTime control.
         /// </summary>
         /// <remarks>
@@ -137,15 +119,6 @@ namespace OneTMUI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtClosedDate;
-        
-        /// <summary>
-        /// txtClosedTime control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtClosedTime;
         
         /// <summary>
         /// lblAssignTeam control.
