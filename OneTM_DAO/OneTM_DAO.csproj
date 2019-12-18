@@ -54,6 +54,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <Compile Include="SeverityDAO.cs" />
     <Compile Include="TeamDAO.cs" />
     <Compile Include="Ticketdao.cs" />
     <Compile Include="UserDAO.cs" />

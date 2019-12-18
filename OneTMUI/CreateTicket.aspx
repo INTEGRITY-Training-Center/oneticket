@@ -68,7 +68,7 @@
                                     <asp:Label ID="lblCreatedDateTime" runat="server" Text="Created DateTime:" CssClass="control-label"></asp:Label>
                                 </div>
                                 <div>
-                                    <asp:TextBox ID="txtCreatedDate" runat="server" TextMode="Date" CssClass="form-contol datetimeStyle datepicker"></asp:TextBox>
+                                    <input size="16" type="text" id="txtCreatedDate" runat="server" class="form_datetime datetimepicker" data-provide="datepicker">
                                 </div>
                               <%--  <div>
                                     <asp:TextBox ID="txtCreatedTime" runat="server" Width="60%" CssClass="form-contol datetimeStyle timepicker"></asp:TextBox>
@@ -182,17 +182,8 @@
             </div>--%>
        
        <script>
-           $('.timepicker').timepicker({
-               timeFormat: 'h:mm p',
-               interval: 30,
-               minTime: '8am',
-               maxTime: '8pm',
-               defaultTime: '10',
-               startTime: '8:00',
-               dynamic: true,
-               dropdown: true,
-               scrollbar: true
-           });
+           $('.datepicker').datepicker();
+           //$(".form_datetime").datetimepicker({ format: 'mm/dd/yyyy' });
     </script>
 
 </asp:Content>

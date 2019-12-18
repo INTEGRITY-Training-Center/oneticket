@@ -11,16 +11,18 @@ namespace OneTMUI
 {
     public partial class CreateTicket : System.Web.UI.Page
     {
-        protected void Page_Init(object sender, EventArgs e)
-        {
-            
-        }
+        
         protected void Page_Load(object sender, EventArgs e)
         {
            
 
             if (!IsPostBack)
             {
+                if (Request.RawUrl.ToLower().Contains(".aspx"))
+                {
+                    Response.RedirectPermanent("CreateTicket", true);
+                    return;
+                }
                 btnCreate.Attributes.Add("style", "display:block;");
                 btnCancel.Attributes.Add("style", "display:block;");
                 btnUpdate.Attributes.Add("style", "display:none;");
@@ -33,19 +35,15 @@ namespace OneTMUI
             
         }
 
-        public void Application_BeginRequest(object sender, EventArgs e)
+        public static string GenerateNewRandom()
         {
-
-            string fullOrigionalpath = Request.Url.ToString();
-
-            if (fullOrigionalpath.Contains("/CreateTicket.aspx"))
+            Random generator = new Random();
+            String r = generator.Next(0, 1000000).ToString("D6");
+            if (r.Distinct().Count() == 1)
             {
-                Context.RewritePath("/CreateTicket");
+                r = GenerateNewRandom();
             }
-            else if (fullOrigionalpath.Contains("/Products/DVDs.aspx"))
-            {
-                Context.RewritePath("/Products.aspx?Category=DVDs");
-            }
+            return r;
         }
 
         public void teambind()
@@ -86,9 +84,8 @@ namespace OneTMUI
 
         protected void btnGenerateTicket_Click1(object sender, EventArgs e)
         {
-            DateTime date = DateTime.UtcNow;
-            int genticketnum = date.GetHashCode();
-            txtTicketNo.Text = genticketnum.ToString();
+            txtTicketNo.Text = GenerateNewRandom();
+            txtCreatedDate.Value = DateTime.UtcNow.AddMinutes(390).ToShortDateString();
         }
 
         protected void btnSearchTicket_Click(object sender, EventArgs e)

@@ -4,13 +4,12 @@
 
 <html>
 <head runat="server">
-    <title></title>
+    <title>One_TM</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.min.css" />
-    <script src="bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <link rel="stylesheet" href="css/jquery.timepicker.css" />
-    <script src="js/jquery.timepicker.js"></script>
+    
+    <%--<link rel="stylesheet" href="css/jquery.timepicker.css" />--%>
+    <link href="bootstrap/dist/css/bsdatepicker.css" rel="stylesheet" />
      <style>
 
         @media print {
@@ -55,9 +54,11 @@
 <body>
     <form id="form1" runat="server">
         <div class="container" style="text-align:center;margin-top:2%;">
-              <a href="TeamUI" class="btn btn-info col-md-3">TeamUI</a>
-             <a href="CreateTicket" class="btn btn-success col-md-3">Ticket</a>
-             <a href="Signin" class="btn btn-primary col-md-3">Sign In</a>
+
+              <a href="TeamUI" class="btn btn-info col-md-2">TeamUI</a>
+             <a href="CreateTicket" class="btn btn-success col-md-2">Ticket</a>
+             <a href="member" class="btn btn-primary col-md-2">Member</a>
+            <a href="report"  class="btn btn-warning col-md-2">Report</a>
         </div>
        
         <div class="container-fluid">
@@ -67,5 +68,9 @@
             </asp:ContentPlaceHolder>
         </div>
     </form>
+     <%--<script src="js/jquery.timepicker.js"></script>--%>
+    <script src="bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="bootstrap/dist/js/bsdatepicker.js"></script>
 </body>
 </html>

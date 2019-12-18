@@ -43,6 +43,7 @@
     <Compile Include="ClosedTicketInfo.cs" />
     <Compile Include="Member_Info.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SeverityInfo.cs" />
     <Compile Include="TeamInfo.cs" />
     <Compile Include="Ticketinfo.cs" />
     <Compile Include="UserInfo.cs" />
