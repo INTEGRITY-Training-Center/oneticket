@@ -18,24 +18,57 @@ namespace MyAPI.Controllers
         }
 
         // GET api/team/5
-        public string Get(int id)
+        public IEnumerable<Team> Get(string id)
         {
-            return "value";
+            var list = from g in db.Teams where g.TeamID == id select g;
+            return list;  
+
         }
 
         // POST api/team
-        public void Post([FromBody]string value)
+        public HttpResponseMessage Post(Team value)
         {
+            try
+            {
+                if (ModelState.IsValid)
+                {
+                    db.Teams.Add(value);
+                    db.SaveChanges();
+                    return Request.CreateResponse(HttpStatusCode.OK);
+                }
+                else
+                {
+                    return Request.CreateResponse(HttpStatusCode.InternalServerError, "Invalid Model");
+                }
+            }
+            catch (Exception ex)
+            {
+                return Request.CreateResponse(HttpStatusCode.InternalServerError, ex.Message);
+            }  
         }
 
         // PUT api/team/5
-        public void Put(int id, [FromBody]string value)
+        public Team Put(string tDes)
         {
+            var obj = db.Teams.Where(n => n.TeamID == tDes).SingleOrDefault();
+            if (obj != null)
+            {
+                Guid ID = Guid.NewGuid();
+                obj.TeamID = ID.ToString();
+                obj.TeamDescription = tDes;
+                obj.CreatedDate = DateTime.UtcNow.AddMinutes(390);
+                obj.UpdatedDate = DateTime.UtcNow.AddMinutes(390);
+                db.SaveChanges();
+            }
+            return obj;
         }
 
         // DELETE api/team/5
-        public void Delete(int id)
+        public void Delete(string id)
         {
+            var obj = db.Teams.Find(id);
+            db.Teams.Remove(obj);
+            db.SaveChanges(); 
         }
     }
 }
