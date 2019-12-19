@@ -3,3 +3,9 @@ D:\New folder (2)\OneTM\Globalizer\bin\Debug\Globalizer.pdb
 D:\New folder (2)\OneTM\Globalizer\obj\Debug\Globalizer.csprojResolveAssemblyReference.cache
 D:\New folder (2)\OneTM\Globalizer\obj\Debug\Globalizer.dll
 D:\New folder (2)\OneTM\Globalizer\obj\Debug\Globalizer.pdb
+C:\Users\JN55\Desktop\ONETM\trunk\Globalizer\bin\Debug\Globalizer.dll
+C:\Users\JN55\Desktop\ONETM\trunk\Globalizer\bin\Debug\Globalizer.pdb
+C:\Users\JN55\Desktop\ONETM\trunk\Globalizer\obj\Debug\Globalizer.dll
+C:\Users\JN55\Desktop\ONETM\trunk\Globalizer\obj\Debug\Globalizer.pdb
+C:\Users\JN55\Desktop\ONETM\trunk\Globalizer\obj\Debug\Globalizer.csprojAssemblyReference.cache
+C:\Users\JN55\Desktop\ONETM\trunk\Globalizer\obj\Debug\Globalizer.csproj.CoreCompileInputs.cache
