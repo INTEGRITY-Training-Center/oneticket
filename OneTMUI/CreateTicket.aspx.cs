@@ -18,11 +18,11 @@ namespace OneTMUI
 
             if (!IsPostBack)
             {
-                if (Request.RawUrl.ToLower().Contains(".aspx"))
-                {
-                    Response.RedirectPermanent("CreateTicket", true);
-                    return;
-                }
+                //if (Request.RawUrl.ToLower().Contains(".aspx"))
+                //{
+                //    Response.RedirectPermanent("CreateTicket", true);
+                //    return;
+                //}
                 btnCreate.Attributes.Add("style", "display:block;");
                 btnCancel.Attributes.Add("style", "display:block;");
                 btnUpdate.Attributes.Add("style", "display:none;");
