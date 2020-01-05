@@ -2,12 +2,11 @@
 <%@ Page Title="" Language="C#" MasterPageFile="~/OTM_Master.Master" AutoEventWireup="true" CodeBehind="CreateTicket.aspx.cs" Inherits="OneTMUI.CreateTicket" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style>
-        
+      
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-      
-            
+
             <div class="row npri" style="margin-top:3em;">
                 <div class="col-1">
                     <div style="display: block; text-align: right; padding-top: 5px;">
@@ -30,7 +29,7 @@
                             <div class="row">
                                 <div class="col-8">
                                     <div class="">
-                                    <asp:TextBox ID="txtSearchTicket" runat="server" CssClass="form-control"></asp:TextBox>
+                                        <asp:TextBox ID="txtSearchTicket" runat="server" CssClass="form-control"></asp:TextBox>
                                     </div>
                                 </div>
                                 <div class="col-4">
@@ -80,6 +79,10 @@
                                 </div>
                                 <div>
                                     <asp:TextBox ID="txtExpiredDate" runat="server" TextMode="Date" CssClass="form-contol datetimeStyle datepicker"></asp:TextBox>
+                                    <asp:CompareValidator ID="CompareValidator1" ControlToCompare="txtCreatedDate" ControlToValidate="txtExpiredDate" Type="Date" Operator="GreaterThan" EnableClientScript="true" runat="server" ErrorMessage="*Invalid" ForeColor="Red"></asp:CompareValidator>
+                                    <%--<asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="RequiredFieldValidator" ControlToValidate="txtExpiredDate"></asp:RequiredFieldValidator>--%>
+
+                                    <%--<asp:CustomValidator ID="CustomValidator1" runat="server" ErrorMessage="CustomValidator"></asp:CustomValidator>--%>
                                 </div>
                                <%-- <div>
                                     <asp:TextBox ID="txtExpiredTime" runat="server" Width="60%" CssClass="form-contol datetimeStyle timepicker"></asp:TextBox>
@@ -91,6 +94,7 @@
                                 </div>
                                 <div>
                                     <asp:TextBox ID="txtClosedDate" runat="server" TextMode="Date" CssClass="form-contol datetimeStyle datepicker"></asp:TextBox>
+                                    <asp:CompareValidator ID="CompareValidator2" ControlToCompare="txtExpiredDate" ControlToValidate="txtClosedDate" Type="Date" Operator="GreaterThanEqual" runat="server" ErrorMessage="*Invalid Date" ForeColor="Red"></asp:CompareValidator>
                                 </div>
                                <%-- <div>
                                     <asp:TextBox ID="txtClosedTime" runat="server" Width="60%"  CssClass="form-contol datetimeStyle timepicker"></asp:TextBox>
@@ -138,7 +142,7 @@
                             <div class="row">
                                 <div class="col-4">
                                     <div class="row">
-                                    <asp:Button ID="btnCreate" runat="server" Text="Create" CssClass="btn btn-primary btnStyle form-control" />
+                                    <asp:Button ID="btnCreate" runat="server" Text="Create" CssClass="btn btn-primary btnStyle form-control" OnClick="btnCreate_Click" />
                                     </div>
                                 </div>
                                 <div class="col-4 offset-1">
@@ -183,7 +187,9 @@
        
        <script>
            $('.datepicker').datepicker();
-           //$(".form_datetime").datetimepicker({ format: 'mm/dd/yyyy' });
+           
+
+          
     </script>
 
 </asp:Content>
